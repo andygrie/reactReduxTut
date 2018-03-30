@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { Provider } from 'react-redux';
 import './styles/index.css';
+import store from './js/store/index';
+import App from './js/components/app';
 
-import store from "./js/store/index";
-import { addArticle } from "./js/actions/index";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 window.store = store;
-window.addArticle = addArticle;
 
 ReactDOM.render(
-  <p>Hallo</p>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
 );
