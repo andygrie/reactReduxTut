@@ -3,13 +3,12 @@ import List from './list';
 import Form from './form';
 
 const App = () => (
-    <div className="row mt-5">
-        <div className="col-md-4 offset-md-1">
+    <div className="grid-container">
+        <div className="grid-column">
             <h2>Articles</h2>
             <List />
         </div>
-        <div className="col-md-4 offset-md-1">
-            <h2>Add a new article</h2>
+        <div className="grid-column">
             <Form />
         </div>
     </div>
